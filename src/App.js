@@ -2,6 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+let a, b, rest
+
+[a, b, ...rest] = [10, 20, 45, 85, 90]
+
+console.log (a)
+console.log (b)
+console.log (rest)
+
+
   return (
     <div className="App">
       <header className="App-header">
