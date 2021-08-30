@@ -14,8 +14,9 @@ const NavBar = () => {
     <nav>
               
     <a className="Mi anima" href="miAnima.html"> MI anima </a>
-    <a class="nav-link" href="index.html"> Inicio</a>
-    <a class="nav-link" href="nosotros.html"> Nosotros</a>
+    <a className="nav-link" href="index.html"> Inicio</a>
+    <a className="nav-link" href="contacto.html"> Contacto</a>
+    <a className="nav-link" href="programas.html"> Programas</a>
     </nav>
     </div>);
 }

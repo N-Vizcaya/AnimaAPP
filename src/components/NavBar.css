@@ -1,7 +1,7 @@
 .menu{
 background-color: greenyellow;
 display:flex;
-padding: 5px;
+
 justify-content:space-between;
 align-items: center;
 
@@ -10,15 +10,16 @@ align-items: center;
 
 
 .menu a{
+padding: 10px;    
 transition-property: all;
 transition-timing-function: ease-in-out;
 transition-duration: 0.3s;
 color:black;
 text-decoration: none;
-    }
+}
     
 .menu a:hover {
-background-color: #E9E9E9;
+background-color:red;
     border-radius: 5px;
-    }
+}
     
