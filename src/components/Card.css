@@ -1,0 +1,18 @@
+.card{
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 10px;
+    background-color: #92f200;
+    display: inline-block;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.295) 0px 0px 10px;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.card-logo{
+    padding: 10px;
+}
+.card-content{
+    color:#0a0a0a;
+    padding: 10px;
+}

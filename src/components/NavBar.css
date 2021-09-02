@@ -1,8 +1,9 @@
 .menu{
-background-color: greenyellow;
+background-color: #92f200;
 display:flex;
-
-justify-content:space-between;
+font-family: 'Open Sans', sans-serif;
+font-weight: 600;
+justify-content:space-around;
 align-items: center;
 
 }
@@ -19,7 +20,12 @@ text-decoration: none;
 }
     
 .menu a:hover {
-background-color:red;
-    border-radius: 5px;
+background-color: #b32821;
+border-radius: 5px;
+}
+
+.iconoCanasta{
+display: inline-block;
+
 }
     
