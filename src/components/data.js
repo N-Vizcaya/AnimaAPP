@@ -1,20 +1,17 @@
+const productos = [
+    {id: 1, name: "funcional", description: "lunes martes y jueves", price: 2500, imgURL:"components/img/pesas.jpg" },
+    {id: 2, name:"Fitboxing", description:"martes y jueves", price:2000, imgURL:"components/img/pesas.jpg"}
+]
 
-const data = {
-    productos: [
-        {
-            id: "1",
-        nombre: "funcional",
-        precio: 2500,
-        image: "https://i.picsum.photos/id/145/4288/2848.jpg?hmac=UkhcwQUE-vRBFXzDN1trCwWigpm7MXG5Bl5Ji103QG4",
-    },
-    {
-        id: "2",
-        nombre: "funcional",
-        precio: 2500,
-        image: "https://i.picsum.photos/id/145/4288/2848.jpg?hmac=UkhcwQUE-vRBFXzDN1trCwWigpm7MXG5Bl5Ji103QG4"
-    }
 
-    ],
-};
+// function getProd(){
 
-export default data
+// return new Promise ((resolve, reject) => {
+
+// setTimeout(() => resolve (productos), 3000)
+
+// })
+
+// }
+
+// const prod = getProd()

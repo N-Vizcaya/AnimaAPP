@@ -19,3 +19,23 @@
 //      </div>
 //    );
 //  }
+
+//item
+export default class Card extends React.Component{
+    render(){
+        return (
+            <div className="card">
+                <div className="card-logo">
+                    <img src={pesas} width='300' alt="imgCard" />
+                </div>
+                <div className="card-content">
+                  <h1>Funcional</h1>  
+                  <p>Entrenamientos funcionales diarios</p>
+                  <p> $2500 </p>
+                </div>
+            </div>
+        )
+    }
+}
+
+{id: 2, name:"Fitboxing", description:"martes y jueves", price: "$2000", imgURL:"components/img/pesas.jpg"}

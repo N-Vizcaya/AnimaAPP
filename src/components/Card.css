@@ -1,9 +1,9 @@
 .card{
-    max-width: 500px;
-    max-height: 400px;
+    max-width: auto;
+    max-height: auto;
     border-radius: 10px;
     background-color: #92f200;
-    display: inline-block;
+    display: inline-flex;
     margin: 10px;
     box-shadow: rgba(0, 0, 0, 0.295) 0px 0px 10px;
     font-family: 'Open Sans', sans-serif;

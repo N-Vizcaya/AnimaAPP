@@ -1,6 +1,6 @@
 import React from 'react';
 import './NavBar.css';
-import marca from './animalogo.png';
+import logo from './img/newAnima.png';
 import Canasta from './CartWidget.js';
 
 
@@ -9,7 +9,7 @@ const NavBar = () => {
     return (
     <div className="menu">
     <div className="logoBrand">
-    <img src={marca} className="logo" alt="logo" width= "100" />
+    <img src={logo} className="logo" alt="logo" width= "100" />
     </div>
     
     <nav>

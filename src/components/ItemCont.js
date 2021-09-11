@@ -1,4 +1,6 @@
 import { useState } from "react";
+import css from './ItemCont.css'
+
 
 const Contador = () => {
 const [count, setCount] = useState(0);
@@ -24,7 +26,6 @@ const miFuncionRestar = () => {
  )
  
 } 
-
 
 
 export default Contador
