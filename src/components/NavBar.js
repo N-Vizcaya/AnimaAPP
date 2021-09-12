@@ -1,6 +1,6 @@
 import React from 'react';
 import './NavBar.css';
-import logo from './img/newAnima.png';
+import logo from './imgCom/newAnima.png';
 import Canasta from './CartWidget.js';
 
 

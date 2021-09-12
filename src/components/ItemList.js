@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import {Card} from 'react-bootstrap';
-import Item from './Item'
+import {Card, Button} from 'react-bootstrap';
+import Item from './Item.js'
 
 
-const items = [
-    {id: 1, name:"Funcional", description:"Lunes y miercoles", price: "$2000", imgURL:"components/img/pesas.jpg"},
-    {id: 2, name:"Fitboxing", description:"martes y jueves", price: "$2000", imgURL:"components/img/pesas.jpg"}
-    ]
+
+
+const ItemList = ({items}) => {
+
+
+return(
+  <div>
+  {items.map(i => <Item key={i.id} description={i.description} name={i.name} price={i.price} img={i.imgURL} />)}
+  </div>
+)
     
-    function getList(){
-    return new Promise ((resolve, reject) => {
-    setTimeout(() => resolve(items), 3000
-    )
-    })
-    }
-  
+
+}
+
+
+ export default ItemList 
