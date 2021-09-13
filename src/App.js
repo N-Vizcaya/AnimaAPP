@@ -7,7 +7,6 @@ import Contador from './components/ItemCont';
 
 
 
-
 function getList(){
   return new Promise ((resolve, reject) => { 
     const item = 
@@ -32,16 +31,11 @@ function getList(){
   })
   }
 
-
-
-
 const App = () => {
 
   const [listItem, setListItem] = useState ([])
   
   const [itemDetail, setItemDetail] = useState ([])
-
-  
 
   useEffect(() => {
 const ItemLista = getList()
@@ -50,14 +44,11 @@ const ItemLista = getList()
 },[]);
 
 
-
 useEffect(() => {
 const itemDetail = getDetail()
 
 itemDetail.then(resultadoDetail => setItemDetail(resultadoDetail))
 },[]);
-
-
 
 
 return (
@@ -75,7 +66,7 @@ return (
 
 
 
-<Itemlist items={listItem}/>
+<Itemlist items={listItem} details={itemDetail} />
 <ItemDetailContainer details={itemDetail}/>
 
 

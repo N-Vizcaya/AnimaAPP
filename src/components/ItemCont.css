@@ -1,8 +1,6 @@
-button{
-color: black;
-
-
-}
+/* .suma{
+padding-right: 10px;    
+} */
 
 .contador{
 max-width: auto;
@@ -10,9 +8,24 @@ border-top: solid;
 border-width: 1px;
 margin-top: 10px;
 
+
 }
 
 p{
 
 font-weight: bold;
+}
+
+.conteo{
+max-width: 50px;
+background-color: white;
+border-radius: 5px;
+display: flex;
+justify-content: center;
+margin-left: 126px;
+
+}
+
+.conteo > p{
+
 }

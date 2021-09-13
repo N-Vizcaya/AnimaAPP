@@ -10,7 +10,7 @@ import Contador from "./ItemCont";
 
 
 
-const Item = ({name, description, price, img}) => {
+const Item = ({name, description, price, img,}) => {
 
       return (
 
@@ -24,7 +24,6 @@ const Item = ({name, description, price, img}) => {
                   <p className="descripcion">{description}</p>
                 <div className="card-price">  
                   <p> {price} </p>
-                
                  </div>
                  <button>Detalles</button>{' '}
                  <Contador/> 
