@@ -1,5 +1,7 @@
 import { useState } from "react";
 import css from './ItemCont.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 
 const Contador = () => {
@@ -17,10 +19,12 @@ const miFuncionRestar = () => {
  
     return (
 
-<div> 
-    <h1>{count}</h1>
-    <button onClick={() => setCount(count + 1)}> Sumar </button>
-    <button onClick={miFuncionRestar} > Restar </button>
+<div className="contador"> 
+    <p>{count}</p>
+    <button onClick={() => setCount(count + 1)}> + </button>
+    <FontAwesomeIcon icon={faShoppingCart} size="2x"/> 
+    <button onClick={miFuncionRestar} > - </button>
+    
 
 </div>
  )

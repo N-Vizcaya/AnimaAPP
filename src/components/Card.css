@@ -1,9 +1,9 @@
 .card{
-    max-width: auto;
+    max-width: 400px;
     max-height: auto;
     border-radius: 10px;
-    background-color: #92f200;
-    display: inline-flex;
+    background-color: #00ff7f;
+   
     margin: 10px;
     box-shadow: rgba(0, 0, 0, 0.295) 0px 0px 10px;
     font-family: 'Open Sans', sans-serif;
@@ -15,4 +15,39 @@
 .card-content{
     color:#0a0a0a;
     padding: 10px;
+    
+}
+
+.card-price{
+background-color: #FA3A48;
+border-radius: 5px;
+border-style: solid;
+border-width: 1px;
+font-weight: bold;
+margin-bottom: 10px;
+
+}
+
+img{
+border-radius: 5px;
+
+}
+.titulo{
+
+border-top: solid;
+
+}
+
+
+
+.descripcion{
+font-weight: bold;
+border-bottom: solid;
+
+}
+
+button{
+
+color: red;
+
 }

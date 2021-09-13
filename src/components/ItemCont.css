@@ -3,3 +3,16 @@ color: black;
 
 
 }
+
+.contador{
+max-width: auto;
+border-top: solid;
+border-width: 1px;
+margin-top: 10px;
+
+}
+
+p{
+
+font-weight: bold;
+}
