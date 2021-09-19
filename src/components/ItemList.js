@@ -1,18 +1,23 @@
 import Item from './Item.js'
-import ItemDetailContainer from './ItemDetailContainer.js'
 import css from './ItemList.css'
+import Programas from './Programas.js'
 
 
 
 
 
 
-const ItemList = ({items}) => {
+
+const ItemList = ({programs}) => {
 
 
 return(
+
+ 
+
   <div className="cardList">
-  {items.map(i => <Item key={i.id} description={i.description} name={i.name} price={i.price} img={i.imgURL}/>)}
+      
+      {programs?.map(program => <Item key={program.id} dias={program.dias} name={program.name} price={program.price} img={program.imgURL} item={program} />)}
   
   </div>
 )

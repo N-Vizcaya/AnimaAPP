@@ -9,6 +9,8 @@
     font-family: 'Open Sans', sans-serif;
     
 }
+
+
 .card-logo{
     padding: 10px;
 }
@@ -28,6 +30,8 @@ margin-bottom: 10px;
 
 }
 
+
+
 img{
 border-radius: 5px;
 
@@ -38,7 +42,11 @@ border-top: solid;
 
 }
 
-
+.detalles{
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 1px;
+}
 
 .descripcion{
 font-weight: bold;

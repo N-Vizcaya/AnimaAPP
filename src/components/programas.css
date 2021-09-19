@@ -1,0 +1,9 @@
+.cargando{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+  margin-top: 200px;
+    
+
+}

@@ -1,6 +1,4 @@
-/* .suma{
-padding-right: 10px;    
-} */
+
 
 .contador{
 max-width: auto;
@@ -22,10 +20,7 @@ background-color: white;
 border-radius: 5px;
 display: flex;
 justify-content: center;
-margin-left: 126px;
+margin-left: 150px;
 
 }
 
-.conteo > p{
-
-}

@@ -1,6 +1,7 @@
 import React from "react";
-import css from './Card.css'
+import css from './Item.css'
 import Contador from "./ItemCont";
+import LoadingSpin from 'react-loading-spin';
 
 
 
@@ -10,22 +11,28 @@ import Contador from "./ItemCont";
 
 
 
-const Item = ({name, description, price, img,}) => {
+
+const Item = ({program}) => {
+
+if(!Item){
+return <LoadingSpin/>
+}
+
 
       return (
 
     
 <div className="card">
                 <div className="card-logo">
-                    <img src={img} width='300' alt="imgCard" />
+                    <img src={"../../"+program.imgURL} width='350' alt="imgCard" />
                 </div>
                 <div className="card-content">
-                  <h1 className="titulo">{name}</h1> 
-                  <p className="descripcion">{description}</p>
+                  <h1 className="titulo">{program.name}</h1>
+                  <p className="dias">{program.dias}</p>
                 <div className="card-price">  
-                  <p> {price} </p>
+                  <p> {program.price} </p>
                  </div>
-                 <button>Detalles</button>{' '}
+                 <button>Detalles</button>
                  <Contador/> 
                 </div>
                 
