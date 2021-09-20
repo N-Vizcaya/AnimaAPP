@@ -1,23 +1,32 @@
 import React from "react";
 import Contador from "./ItemCont";
+import css from "./ItemDetail.css"
+import LoadingSpin from 'react-loading-spin';
+import { Link, NavLink } from 'react-router-dom';
 
 
-const ItemDetail = (programa) => {
+
+
+const ItemDetail = ({item}) => {
+  if(!ItemDetail.length === 0){
+    return <LoadingSpin/>
+    }
+    
+
 
     return(
 
         <div className="card">
         <div className="card-logo">
-            <img  width='350' alt="imgCard" />
+            <img src={"../../"+ item?.imgURL} width='350' alt="imgCard" />
         </div>
         <div className="card-content">
-          <h1 className="titulo">{programa.name} </h1>
-          <p className="detalles"></p>
-          <p className="dias"></p>
+          <h1 className="titulo"> {item?.name} </h1>
+          <p className="detalles"> {item?.detalles}</p>
         <div className="card-price">  
-          <p></p>
+          <p> {item?.price} </p>
          </div>
-         <button>Detalles</button>
+         
          <Contador/> 
         </div>
         

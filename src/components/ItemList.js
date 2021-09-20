@@ -8,19 +8,19 @@ import Programas from './Programas.js'
 
 
 
-const ItemList = ({programs}) => {
+const ItemList = ({prog}) => {
 
 
-return(
+ return(
 
  
 
-  <div className="cardList">
+   <div className="cardList">
       
-      {programs?.map(program => <Item key={program.id} dias={program.dias} name={program.name} price={program.price} img={program.imgURL} item={program} />)}
+       {prog.map(program => <Item key={program.id} dias={program.dias} name={program.name} price={program.price} img={program.imgURL} />)}
   
-  </div>
-)
+   </div>
+ )
     
 
 }

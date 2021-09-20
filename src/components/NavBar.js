@@ -3,7 +3,7 @@ import './NavBar.css';
 import logo from './imgCom/newAnima.png';
 import Canasta from './CartWidget.js';
 import { Link, NavLink } from 'react-router-dom';
-// import Item from './Item.js'
+
 import Programas from './Programas'
 import Programa from './Programa';
 
@@ -24,8 +24,6 @@ const NavBar = () => {
     
     <nav>
     <Link to="/Programs"> Programas </Link>    
-
-    {/* {products.map(i => <Link key={i.id} to={`/programa/${i.name}`} activeClassName="NavLink">{i.name} </Link> )} */}
     <div className="iconoCanasta">
     <Canasta/>    
     </div>

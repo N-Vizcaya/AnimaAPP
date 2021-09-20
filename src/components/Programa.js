@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-// import LoadingSpin from 'react-loading-spin';
+ import LoadingSpin from 'react-loading-spin';
 import Item from "./Item.js";
+import ItemDetail from "./ItemDetail.js";
 
 const programas = () => {
     return new Promise ((resolve, reject) =>{
@@ -11,7 +12,7 @@ const programas = () => {
             {id: 2, name:"Fitboxing",  detalles: "Toma la parte aerobica del entrenamiento del boxeo", price: "$2000", imgURL:"./img/fitboxing1.jpg"},
             {id: 3, name:"FutFem", detalles: "Veni a entrenar con el equipo fememino de futbol, todos los miercoles y viernes", price:"$1800", imgURL:"./img/futbolFem.jpg"}
         ]
-    setTimeout(() => resolve(programas), 3000)
+    setTimeout(() => resolve(programas), 1000)
     })}
 
 
@@ -19,22 +20,27 @@ const programas = () => {
 
     const { name } = useParams()
   const [programa, setPrograma] = useState(undefined)
-  console.log(name)
+
   useEffect(() => {
     const listPrograma = programas()
-    console.log(listPrograma)
+    
     listPrograma.then(result => {
-      const programa = result.find(prog => prog.name === name)
+      const programa = result.find(progD => progD.name === name)
       setPrograma(programa)
     })
     return (() => {
       setPrograma(undefined)
     })
   }, [name])    
-console.log(programa)
-    return (
-        <Item progDetails={programa}/>
-    )
+
+ 
+
+
+     return (
+      <div className="detalle">
+      <ItemDetail item={programa}/>
+         </div>
+     )
       
  }   
 

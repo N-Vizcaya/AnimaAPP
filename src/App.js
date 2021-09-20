@@ -57,23 +57,19 @@ return (
 <header>
 
 <BrowserRouter>
-<NavBar  />
+<NavBar/>
 
 <Switch>
-<Route path="/Itemlist">
-
-    <Itemlist programs={listItem} />
-</Route>
  
+ <Route path="/programs">
+<Programs/>
+</Route>
 
- <Route path="/Programs">
-<Programs prog={listItem} />
+<Route path="/programa/:name">
+<Programa/>
 </Route>
 
 
-
-
-  
 
   <Route path="/" exact>
     <Home/>

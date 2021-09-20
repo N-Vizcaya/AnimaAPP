@@ -1,11 +1,11 @@
 import ItemDetail from './ItemDetail.js'
 
-const ItemDetailContainer = ({details}) => {
+const ItemDetailContainer = ({progDetail}) => {
 
 return(
 
 <div>
-{details.map(i => <ItemDetail key={i.id} detail={i.detail}/>)}
+{progDetail?.map(progDet => <ItemDetail key={progDet.id} detail={progDet.name}/>)}
 
 </div>
 

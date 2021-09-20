@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react"
-import ItemList from "./ItemList.js"
+import Itemlist from "./ItemList.js"
 import LoadingSpin from 'react-loading-spin';
 import './programas.css'
+
 
 const getProgramas = () => {
 return new Promise ((resolve, reject) =>{
 const programas =
     [
-        {id: 1, name:"Funcional", detalles: "Entrenamientos funcionales, para toda persona apta para realizar ejercicio", dias:"Lunes y miercoles", price: "$2500", imgURL:"./img/funcional.jpg"},
-        {id: 2, name:"Fitboxing",  detalles: "Toma la parte aerobica del entrenamiento del boxeo", dias:"Martes y jueves", price: "$2000", imgURL:"./img/fitboxing1.jpg"},
-        {id: 3, name:"Futbol Femenino", detalles: "Veni a entrenar con el equipo fememino de futbol, todos los miercoles y viernes", dias:"Miercoles y viernes", price:"$1800", imgURL:"./img/futbolFem.jpg"}
+        {id: 1, name:"Funcional", dias:"Lunes y miercoles", price: "$2500", imgURL:"./img/funcional.jpg"},
+        {id: 2, name:"Fitboxing", dias:"Martes y jueves", price: "$2000", imgURL:"./img/fitboxing1.jpg"},
+        {id: 3, name:"FutFem", dias:"Miercoles y viernes", price:"$1800", imgURL:"./img/futbolFem.jpg"}
     ]
-setTimeout(() => resolve(programas), 1000)
+setTimeout(() => resolve(programas), 3000)
 
 })}
 
@@ -35,9 +36,9 @@ const [programs, setPrograms] = useState ([])
     }
 
     return (
-        <div style={{alignItems: "center"}}>
+        <div  className="grupoCard">
         <h1> Programas </h1>
-        <ItemList program={programs}/>
+        <Itemlist prog={programs} />
         
         </div> 
        
