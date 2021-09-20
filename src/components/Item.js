@@ -12,7 +12,11 @@ import { Link, NavLink } from 'react-router-dom';
 
 
 
+
+
 const Item = (program) => {
+
+
 
 if(!Item){
 return <LoadingSpin/>
@@ -21,22 +25,17 @@ return <LoadingSpin/>
 
       return (
 
-    
 <div className="card">
-                <div className="card-logo">
-                    <img src={"../../"+ program?.imgURL} width='350' alt="imgCard" />
-                </div>
-                <div className="card-content">
+    
+             <div className="card-content">
                   <h1 className="titulo">{program.name}</h1>
                   <p className="dias">{program.dias}</p>
-                <div className="card-price">  
-                  <p> {program.price} </p>
+                <div className="cardLink">  
+                <Link to={`/programa/${program.name}`} > <button className="verMas">Ver Detalle </button> </Link>
                  </div>
-                 <Link to={`/programa/${program.name}`} > <a className="btn btn-secondary btn-sm">Ver Detalle</a></Link>
-                 <Contador/> 
+                 
                 </div>
-                
-            </div>
+  </div>
 )
   
 }

@@ -4,7 +4,7 @@ const ItemDetailContainer = ({progDetail}) => {
 
 return(
 
-<div>
+<div className="detailGroup">
 {progDetail?.map(progDet => <ItemDetail key={progDet.id} detail={progDet.name}/>)}
 
 </div>

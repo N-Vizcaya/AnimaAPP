@@ -1,19 +1,21 @@
-.card{
+.cardDetail{
     max-width: 400px;
     max-height: auto;
     border-radius: 10px;
     background-color: #00ff7f;
-   
     margin: 10px;
     box-shadow: rgba(0, 0, 0, 0.295) 0px 0px 10px;
     font-family: 'Open Sans', sans-serif;
+    margin-left: 100px;
+    display: inline-block;
+}
+
+
+.card-photo{
+    padding: 5px;
     
 }
 
-
-.card-logo{
-    padding: 10px;
-}
 .card-content{
     color:#0a0a0a;
     padding: 10px;

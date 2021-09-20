@@ -17,7 +17,7 @@ const ItemList = ({prog}) => {
 
    <div className="cardList">
       
-       {prog.map(program => <Item key={program.id} dias={program.dias} name={program.name} price={program.price} img={program.imgURL} />)}
+       {prog.map(program => <Item key={program.id} dias={program.dias} name={program.name} price={program.price} imagen={program.imagenURL} />)}
   
    </div>
  )

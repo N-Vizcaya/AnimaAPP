@@ -8,17 +8,15 @@ import { Link, NavLink } from 'react-router-dom';
 
 
 const ItemDetail = ({item}) => {
-  if(!ItemDetail.length === 0){
-    return <LoadingSpin/>
-    }
+console.log(item?.imgURL)
     
 
 
     return(
 
-        <div className="card">
-        <div className="card-logo">
-            <img src={"../../"+ item?.imgURL} width='350' alt="imgCard" />
+        <div className="cardDetail">
+        <div className="card-photo">
+            <img src={"../../"+ item?.imgURL} width='380' alt="imgCard" />
         </div>
         <div className="card-content">
           <h1 className="titulo"> {item?.name} </h1>

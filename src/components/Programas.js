@@ -2,15 +2,18 @@ import { useState, useEffect } from "react"
 import Itemlist from "./ItemList.js"
 import LoadingSpin from 'react-loading-spin';
 import './programas.css'
+import { useLocation } from "react-router";
+
+
 
 
 const getProgramas = () => {
 return new Promise ((resolve, reject) =>{
 const programas =
     [
-        {id: 1, name:"Funcional", dias:"Lunes y miercoles", price: "$2500", imgURL:"./img/funcional.jpg"},
-        {id: 2, name:"Fitboxing", dias:"Martes y jueves", price: "$2000", imgURL:"./img/fitboxing1.jpg"},
-        {id: 3, name:"FutFem", dias:"Miercoles y viernes", price:"$1800", imgURL:"./img/futbolFem.jpg"}
+        {id: 1, name:"Funcional", dias:"Lunes y miercoles"},
+        {id: 2, name:"Fitboxing", dias:"Martes y jueves"},
+        {id: 3, name:"FutFem", dias:"Miercoles y viernes"}
     ]
 setTimeout(() => resolve(programas), 3000)
 
@@ -19,7 +22,8 @@ setTimeout(() => resolve(programas), 3000)
 const Programs = () => {
 
 const [programs, setPrograms] = useState ([])
-
+const location = useLocation()
+console.log(location.pathname)
     useEffect(() => {
         const listPrograms = getProgramas()
         listPrograms.then(resultado => setPrograms(resultado))

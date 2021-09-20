@@ -28,18 +28,22 @@ const programas = () => {
       const programa = result.find(progD => progD.name === name)
       setPrograma(programa)
     })
+
+    
+
     return (() => {
       setPrograma(undefined)
     })
   }, [name])    
 
+  
  
 
 
      return (
-      <div className="detalle">
+      
       <ItemDetail item={programa}/>
-         </div>
+         
      )
       
  }   
