@@ -4,8 +4,6 @@ import logo from './imgCom/newAnima.png';
 import Canasta from './CartWidget.js';
 import { Link, NavLink } from 'react-router-dom';
 
-import Programas from './Programas'
-import Programa from './Programa';
 
 
 
@@ -23,6 +21,7 @@ const NavBar = () => {
     </div>
     
     <nav>
+    <Link to="/"> Inicio </Link>    
     <Link to="/Programs"> Programas </Link>  
     <Link to="/Contacto"> Contacto </Link>   
     <div className="iconoCanasta">

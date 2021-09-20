@@ -1,6 +1,6 @@
 import React from "react";
 import css from './Item.css'
-import Contador from "./ItemCont";
+
 import LoadingSpin from 'react-loading-spin';
 import { Link, NavLink } from 'react-router-dom';
 
