@@ -23,7 +23,8 @@ const NavBar = () => {
     <nav>
     <Link to="/"> Inicio </Link>    
     <Link to="/Programs"> Programas </Link>  
-    <Link to="/Contacto"> Contacto </Link>   
+    <Link to="/Contacto"> Contacto </Link> 
+    <Link to="/Cart"> Carrito </Link>  
     <div className="iconoCanasta">
     <Canasta/>    
     </div>

@@ -11,9 +11,9 @@ const getProgramas = () => {
 return new Promise ((resolve, reject) =>{
 const programas =
     [
-        {id: 1, name:"Funcional", dias:"Lunes y miercoles"},
-        {id: 2, name:"Fitboxing", dias:"Martes y jueves"},
-        {id: 3, name:"FutFem", dias:"Miercoles y viernes"}
+        {id: 1, name:"Funcional", dias:"Lunes y miercoles", stock: 6},
+        {id: 2, name:"Fitboxing", dias:"Martes y jueves", stock: 6},
+        {id: 3, name:"FutFem", dias:"Miercoles y viernes", stock: 6}
     ]
 setTimeout(() => resolve(programas), 3000)
 

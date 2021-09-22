@@ -1,35 +1,69 @@
-import { useState } from "react";
+import { useState, useContext} from "react";
 import css from './ItemCont.css'
 import Carrito from './CartWidget.js'
 
 
-const Contador = () => {
-const [count, setCount] = useState(0);
-const miFuncionRestar = () => {
-    if (count !== 0){
-    setCount(count -1)
 
-    }else{
-        alert("El carrito esta vacio") //el alert es solo de prueba, no va a estar en el proyecto final
-    }
-    }
+const Comprar = ({items, setCount, programsAdded, addProgFunction}) => {
+
+const [quantity, setQuantity] = useState(0);
+
+const onAdd = () => {
+    if (quantity < items?.stock)  {
+    setQuantity(quantity + 1)
     
+    }
+    }
+
+const onRemove = () => {
+    if (quantity > 0)  {
+    setQuantity(quantity - 1)
+    
+    }
+    }
+ 
+
+const onAddtoCart = () =>{
+    // const newProgram = {
+    //  ...items,
+    // quantity: quantity
+    //       }
+    // addProgFunction([...programsAdded, newProgram ])
+    
+      setCount(quantity)
+      setQuantity(0)
+     }
+       
 
  
     return (
 
 <div className="contador"> 
-    <div className="conteo">
-       <p > {count} </p> 
-       </div>  	
-    <button className="suma" onClick={() => setCount(count + 1)}> + </button>
+
+        	
+
+                
+                    
+      <button className="Button" onClick={()=> onRemove() }>-</button>
+                        
+      <span style={{fontSize : '20px'}}> {quantity} </span>
+                        
+      <button className="Button" onClick={() => onAdd() }>+</button>
+
+                    
+
+     <button onClick={() => onAddtoCart()} > Comprar </button>
+                    
+                    {/* 
+                        <td align="center" colSpan="5"><button className="Button" onClick={()=>onAddtoCart()}>Agregar al carrito</button></td>
+                     */}
+                   
+     <Carrito/>
+            
     
-    <button className="resta" onClick={miFuncionRestar} > - </button>
-    <Carrito/>
 </div>
  )
  
 } 
 
-
-export default Contador
+export default Comprar 
