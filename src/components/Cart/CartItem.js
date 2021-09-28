@@ -4,35 +4,34 @@ import { Typography, Button, Card, CardActions, CardContent, CardMedia
   } from "@material-ui/core";
 
   const CartItem = ({item, setCantidad}) =>{
-    const [cantidadItem, setCantidadItem] = useState(item.quantity)
+   
     const {removeItem} = useContext(CartContext)
 
 
-    setCantidad((item.price) * (item.quantity))
+    setCantidad(Number(item.price) * Number(item.quantity))
     return (
         <Card>
           <CardMedia
-            image={item.imgURL}
+            imagen={item.imgURL}
             alt={item.name}
+
             
           />
           <CardContent>
+         <div className="imagen">
+             <img src={item.imgURL} alt="funcional" /> 
+         </div>
             <Typography variant="h4">{item.name}</Typography>
             <Typography variant="h5"> $
-              {(item.price) * (item.quantity)}
+            {Number(item.price) * Number(item.quantity)}
             </Typography>
           </CardContent>
           <CardActions>
-            
-              <Button type="button" size="small" onClick={item.quantity - 1}>
-                -
-              </Button>
-              <Typography>{item.quantity}</Typography>
-              <Button type="button" size="small" onClick={() => setCantidadItem(Number(item.quantity) + 1)}>
-                +
-                </Button>
           
-            <Button variant="contained" type="button" color="secondary" onClick={() => removeItem(item.id)}>
+              <span>{item.quantity}</span>
+              
+          
+            <Button variant="contained" type="button" color="primary" onClick={() => removeItem(item.id)}>
               Remover
             </Button>
           </CardActions>
