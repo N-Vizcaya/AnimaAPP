@@ -1,14 +1,14 @@
 import './App.css';
 import NavBar from './components/NavBar.js'
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 import Itemlist from './components/ItemList.js'
-
 import {BrowserRouter, Switch, Route,} from 'react-router-dom'
 import Home from './components/Home.js'
 import Programs from './components/Programas';
-import Programa from './components/Programa';
+import ItemDetailContainer from './components/ItemDetailContainer';
 import Contacto from './Contacto';
 import Cart from './components/Cart/Cart.js'
+import {CartContextProvider} from './components/CartContext/CartContext'
 
 
 
@@ -19,12 +19,12 @@ import Cart from './components/Cart/Cart.js'
 
 const App = () => {
  
-const[cartPrograms, setCartPrograms] = useState([])
+
 
 
 
 return (
- 
+ <CartContextProvider>
   <div className="App">
 <header>
 
@@ -38,18 +38,17 @@ return (
 </Route>
 
 <Route path="/programa/:name">
-<Programa programsAdded={cartPrograms} addProgFunction={setCartPrograms} />
+<ItemDetailContainer />
 </Route>
 
-<Route path="/Cart">
-<Cart programsAdded={cartPrograms}  addProgFunction={setCartPrograms} />
-</Route>
 
 <Route path="/Contacto">
 <Contacto/>
 </Route>
 
-
+<Route path="/cart">
+  <Cart/>
+</Route>
 
 
 <Route path="/" exact>
@@ -67,7 +66,7 @@ return (
 
 
 </div>
-
+</CartContextProvider>
     );  
 
 }

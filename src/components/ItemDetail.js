@@ -1,16 +1,46 @@
 import React, { useState } from "react";
 import ItemCount from "./ItemCont";
 import css from "./ItemDetail.css"
+import {CartContext} from "./CartContext/CartContext";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
 
 
 
 
 
+const ItemDetail = ({item}) => {
+  const [productsCart, setProductsCart] = useState(undefined);
+  const [cart, setCart] = useState(true);
+  const [itemCount, setItemCount] = useState();
+  const { quantity, addItem, isInCart } = useContext(CartContext);
 
-const ItemDetail = ({item, programsAdded, addProgFunction}) => {
-const [count, setCount] = useState([])
-console.log(count)
 
+
+  const handleOnAdd = () => {
+    setCart(false);
+  };
+
+  const FinalizarCompra = () => {
+    //Aparece el carritto
+    const handleOnClick = () => {
+      setCart(true);
+    };
+
+    return (
+      <>
+        <button onClick={handleOnClick} variant="contained">
+          Volver
+        </button>
+        <Link style={{ textDecoration: "none" }} to="/cart">
+          <button variant="contained" color="secondary">
+            Finalizar Compra
+          </button>
+        </Link>
+      </>
+    );
+  };
+    
 
     return(
 
@@ -26,7 +56,9 @@ console.log(count)
           <p> {item?.price} </p>
          </div>
          
-         <ItemCount items={item} programsAdded={programsAdded} addProgFunction={addProgFunction} setCount={setCount} /> 
+         <ItemCount items={item} stock={5}
+                onAdd={handleOnAdd}
+                setItemCount={setItemCount} /> 
         </div>
         
     </div>
