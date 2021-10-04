@@ -37,7 +37,7 @@ return (
 <Programs/>
 </Route>
 
-<Route path="/programa/:name">
+<Route path="/programa/:programid">
 <ItemDetailContainer />
 </Route>
 

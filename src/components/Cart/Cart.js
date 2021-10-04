@@ -1,5 +1,4 @@
 import React, {useContext, useState} from 'react';
-import ItemDetail from "../ItemDetail";
 import { Link } from "react-router-dom";
 import { CartContext } from '../CartContext/CartContext';
 import Programa from "../ItemDetailContainer";

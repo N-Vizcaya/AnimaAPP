@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ItemCount from "./ItemCont";
-import css from "./ItemDetail.css"
+import "./ItemDetail.css"
 import {CartContext} from "./CartContext/CartContext";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
@@ -10,10 +10,10 @@ import { useContext } from "react";
 
 
 const ItemDetail = ({item}) => {
-  const [productsCart, setProductsCart] = useState(undefined);
+  // const [productsCart, setProductsCart] = useState(undefined);
   const [cart, setCart] = useState(true);
   const [itemCount, setItemCount] = useState();
-  const { quantity, addItem, isInCart } = useContext(CartContext);
+  // const { quantity, addItem, isInCart } = useContext(CartContext);
 
 
 
@@ -22,7 +22,7 @@ const ItemDetail = ({item}) => {
   };
 
   const FinalizarCompra = () => {
-    //Aparece el carritto
+    
     const handleOnClick = () => {
       setCart(true);
     };
@@ -32,14 +32,14 @@ const ItemDetail = ({item}) => {
         <button onClick={handleOnClick} variant="contained">
           Volver
         </button>
-        <Link style={{ textDecoration: "none" }} to="/cart">
-          <button variant="contained" color="secondary">
+        <Link  to="/cart">
+          <button>
             Finalizar Compra
           </button>
         </Link>
       </>
-    );
-  };
+    )
+  }
     
 
     return(
@@ -50,15 +50,13 @@ const ItemDetail = ({item}) => {
         </div>
         <div className="card-content">
           <h1 className="titulo"> {item?.name} </h1>
-          <p className="detalles"> {item?.detalles}</p>
+          <p className="detalles"> {item?.description}</p>
           <p> Stock disponible: {item?.stock} </p>
         <div className="card-price">  
           <p> {item?.price} </p>
          </div>
          
-         <ItemCount items={item} stock={5}
-                onAdd={handleOnAdd}
-                setItemCount={setItemCount} /> 
+         <ItemCount items={item} stock={5} onAdd={handleOnAdd} setItemCount={setItemCount} /> 
         </div>
         
     </div>

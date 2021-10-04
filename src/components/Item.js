@@ -1,7 +1,7 @@
 import React from "react";
-import css from './Item.css'
+import './Item.css'
 import LoadingSpin from 'react-loading-spin';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -13,7 +13,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 
 
-const Item = (program) => {
+const Item = ({programs}) => {
 
 
 
@@ -27,11 +27,10 @@ return <LoadingSpin/>
 <div className="card">
     
              <div className="card-content">
-                  <h1 className="titulo">{program.name}</h1>
-                  <p className="dias">{program.dias}</p>
-                  <p className="dias">{program.stock}</p>
+                  <h1 className="titulo">{programs.name}</h1>
+                  <p className="dias">{programs.dias}</p>
                 <div className="cardLink">  
-                <Link to={`/programa/${program.name}`} > <button className="verMas">Ver Detalle </button> </Link>
+                <Link to={`/programa/${programs.id}`} > <button className="verMas">Ver Detalle </button> </Link>
                  </div>
                  
                 </div>

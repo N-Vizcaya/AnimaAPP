@@ -1,6 +1,5 @@
 import Item from './Item.js'
-import css from './ItemList.css'
-import Programas from './Programas.js'
+import  './ItemList.css'
 
 
 
@@ -8,7 +7,8 @@ import Programas from './Programas.js'
 
 
 
-const ItemList = ({prog}) => {
+
+const ItemList = ({programs}) => {
 
 
  return(
@@ -17,7 +17,7 @@ const ItemList = ({prog}) => {
 
    <div className="cardList">
       
-       {prog.map(program => <Item key={program.id} dias={program.dias} name={program.name} stock={prog.stock} />)}
+       {programs.map(programs => <Item key={programs.id} programs={programs} />)}
   
    </div>
  )
