@@ -1,63 +1,27 @@
-import { useState, useContext} from "react";
+import { useState, useContext, useEffect} from "react";
 import css from './ItemCont.css'
 import Carrito from './CartWidget.js'
 import { CartContext } from "./CartContext/CartContext";
 
 
 
-const Comprar = ({items, onAdd, setItemCount }) => {
+const Comprar = ({items, cantidad}) => {
 
     const [count, setCount] = useState(0);
-const { quantity, changeQuantity, addItem, productsCart, setProductsCart } =
-    useContext(CartContext);
+    const {addItem, isInCar, getProduct}= useContext(CartContext)
 
 
-    setItemCount(count);   
-    const add = () => {
-        if (count < items?.stock) {
-          setCount(count + 1);
-          changeQuantity(quantity + 1);
-        }
-      };
-
-const onRemove = () => {
-    if (count > 0) {
-        setCount(count - 1);
-        changeQuantity(quantity - 1);
+    useEffect(() => {
+      if(isInCar(items.id)) {
+         const oldQuantity = getProduct(items.id)?.quantity
+         setCount(oldQuantity)
+         cantidad(oldQuantity)
       }
-    };
+  },[])
 
-    const handleOnClick = () => {
-        const productsCartId = productsCart?.map(item=> item.id)
-       
-        if (productsCartId?.includes(items.id)) {
-            const updateCart = productsCart?.map (i => {
-                if (i.id === items.id){
-               
-                  let oldQuantity = i.quantity
-                  return{
-                    ...i,
-                    quantity: count + oldQuantity
-                  }
-                }else{
-                  return i
-                }
-            })
-            
-            
-            setProductsCart(updateCart)
-            }  else{const newProduct = {
-              ...items,
-              quantity: count,
-            };
-          
-            productsCart
-              ? addItem([...productsCart, newProduct])
-              : addItem([newProduct]);
-          } 
-
-          onAdd();
-  };
+  const onAddProduct=()=>{
+    addItem(items, count)
+}
 
 
     return (
@@ -68,19 +32,16 @@ const onRemove = () => {
 
                 
                     
-      <button className="Button" onClick={()=> onRemove() }>-</button>
+      <button className="Button" onClick={()=>count>1?setCount(count-1):''}>-</button>
                         
       <span style={{fontSize : '20px'}}> {count} </span>
                         
-      <button className="Button" onClick={() => add() }>+</button>
+      <button className="Button" onClick={()=>count<items.stock?setCount(count+1):''}>+</button>
 
                     
 
-     <button  onClick={handleOnClick} > Comprar </button>
+     <button  onClick={onAddProduct} > Comprar </button>
                     
-                    {/* 
-                        <td align="center" colSpan="5"><button className="Button" onClick={()=>onAddtoCart()}>Agregar al carrito</button></td>
-                     */}
                    
      <Carrito/>
             

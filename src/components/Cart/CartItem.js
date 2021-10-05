@@ -1,42 +1,31 @@
 import React, {useState, useContext} from "react";
 import { CartContext } from "../CartContext/CartContext";
-import { Typography, Button, Card, CardActions, CardContent, CardMedia
+import { CardActions, CardMedia, Card
   } from "@material-ui/core";
+import "../ItemDetail.css"
 
   const CartItem = ({item, setCantidad}) =>{
    
     const {removeItem} = useContext(CartContext)
 
 
-    setCantidad(Number(item.price) * Number(item.quantity))
-    return (
-        <Card>
-          <CardMedia
-            imagen={item.imgURL}
-            alt={item.name}
+    return(
+      
+      <div className="cardDetail">
+        <div className="card-photo">
+            <img src={"../../"+ item.imgURL} width='380' alt="imgCard" />
+        </div>
+        <div className="card-content">
+          <h1 className="titulo"> {item.name} </h1>
+          <p className="detalles"> {item.description}</p>
+          <p className="detalles"> {item.price}</p>
+          <button onClick={()=>removeItem(item.id)}>Quitar producto</button>
+      </div>
+      </div>
+      )
 
-            
-          />
-          <CardContent>
-         <div className="imagen">
-             <img src={item.imgURL} alt="funcional" /> 
-         </div>
-            <Typography variant="h4">{item.name}</Typography>
-            <Typography variant="h5"> $
-            {Number(item.price) * Number(item.quantity)}
-            </Typography>
-          </CardContent>
-          <CardActions>
-          
-              <span>{item.quantity}</span>
-              
-          
-            <Button variant="contained" type="button" color="primary" onClick={() => removeItem(item.id)}>
-              Remover
-            </Button>
-          </CardActions>
-        </Card>
-      );
+
+
     };
     
     export default CartItem;

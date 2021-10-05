@@ -3,13 +3,14 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail.js";
 import { doc, getDoc } from "@firebase/firestore";
 import { db } from "./services/Firebase/Firebase.js";
+import LoadingSpin from 'react-loading-spin';
 
 
 
 
  const ItemDetailContainer = () => {
 
-    const [programs, setPrograms] = useState()
+    const [programs, setPrograms] = useState([])
     const [loading, setLoading] = useState(true)
     
      const {programid} = useParams()
@@ -31,12 +32,15 @@ import { db } from "./services/Firebase/Firebase.js";
         })
     },[programid])
 
-  
+    
+
+
+
 
      return (
       
         <div className='ItemDetailContainer' >
-         {loading ? "Loading.." : <ItemDetail item={programs} programid={programid}/>}  
+         {loading ? <LoadingSpin/> : <ItemDetail item={programs} programid={programid}/>}  
     </div>
          
      )

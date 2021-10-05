@@ -34,24 +34,13 @@ const {idProg} = useParams()
                 const programs = querySnapshot.docs.map(doc => {
                     return {id: doc.id, ...doc.data() }
                 })
-                console.log(programs)
                 setPrograms(programs)
                 
             }).catch((error)=>
             console.log('error al encontrar los productos', error)
             )
         }
-        // else {
-        //     getDocs(query(collection(db, 'items'), where('category', '==', idProg))).then((querySnapshot) =>{
-        //         const programs = querySnapshot.docs.map(doc => {
-        //             return {id: doc.id, ...doc.data() }
-        //         })
-        //         setPrograms(programs) 
-            
-        //     }).catch((error) =>{
-        //         console.log(('Error searching intems', error))
-        //     })
-        // }
+        
         
     }, [idProg])
 

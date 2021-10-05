@@ -10,37 +10,13 @@ import { useContext } from "react";
 
 
 const ItemDetail = ({item}) => {
-  // const [productsCart, setProductsCart] = useState(undefined);
-  const [cart, setCart] = useState(true);
-  const [itemCount, setItemCount] = useState();
-  // const { quantity, addItem, isInCart } = useContext(CartContext);
+  const [cantidad, setCantidad] = useState();
+  
 
 
+  
 
-  const handleOnAdd = () => {
-    setCart(false);
-  };
 
-  const FinalizarCompra = () => {
-    
-    const handleOnClick = () => {
-      setCart(true);
-    };
-
-    return (
-      <>
-        <button onClick={handleOnClick} variant="contained">
-          Volver
-        </button>
-        <Link  to="/cart">
-          <button>
-            Finalizar Compra
-          </button>
-        </Link>
-      </>
-    )
-  }
-    
 
     return(
 
@@ -56,7 +32,7 @@ const ItemDetail = ({item}) => {
           <p> {item?.price} </p>
          </div>
          
-         <ItemCount items={item} stock={5} onAdd={handleOnAdd} setItemCount={setItemCount} /> 
+         <ItemCount items={item} stock={5}  cantidad={setCantidad} /> 
         </div>
         
     </div>
