@@ -1,7 +1,5 @@
-import React, {useState, useContext} from "react";
+import React, {useContext} from "react";
 import { CartContext } from "../CartContext/CartContext";
-import { CardActions, CardMedia, Card
-  } from "@material-ui/core";
 import "../ItemDetail.css"
 
   const CartItem = ({item, setCantidad}) =>{
@@ -18,7 +16,7 @@ import "../ItemDetail.css"
         <div className="card-content">
           <h1 className="titulo"> {item.name} </h1>
           <p className="detalles"> {item.description}</p>
-          <p className="detalles"> {item.price}</p>
+          <p className="detalles"> $ {item.price}</p>
           <button onClick={()=>removeItem(item.id)}>Quitar producto</button>
       </div>
       </div>
