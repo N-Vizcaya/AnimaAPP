@@ -8,6 +8,7 @@ import Contacto from './Contacto';
 import Cart from './components/Cart/Cart.js'
 import {CartContextProvider} from './components/CartContext/CartContext'
 import Login from './components/Login/login';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 

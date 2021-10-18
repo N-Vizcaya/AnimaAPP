@@ -16,6 +16,7 @@ const {shoppingCart, clear, getTotal}= useContext(CartContext)
     return(<>
         <h1>No hay productos</h1>
         <Link to="/Programs"> Volver al home</Link>
+
     </>)
 }
 
@@ -56,10 +57,10 @@ if(outOfSotck.length === 0) {
 
 return(<>
 <div className="cartItem">
-  <button id="emptyCart" onClick={()=>clear()}>Vaciar carrito</button>
-  <button onClick={() => ordenConfirm()}>Confirmar compra</button>
+  <button id="emptyCart" onClick={()=>clear()} disabled={shoppingCart.length === 0}>Vaciar carrito</button>
+  <button onClick={() => ordenConfirm()} disabled={shoppingCart.length === 0}>Confirmar compra</button>
   {shoppingCart.map(e=><CartItem item={e} />)}
-  <h3>Total: {getTotal()}</h3>
+  <h3 disabled={shoppingCart.length === 0}>Total: {getTotal()}</h3>
 </div>  
 </>)
 }

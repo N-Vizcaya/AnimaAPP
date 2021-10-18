@@ -15,8 +15,9 @@ import "../ItemDetail.css"
         </div>
         <div className="card-content">
           <h1 className="titulo"> {item.name} </h1>
-          <p className="detalles"> {item.description}</p>
-          <p className="detalles"> $ {item.price}</p>
+          <p> {item.description}</p>
+          <p> $ {item.price}</p>
+          <p> Cantidad seleccionada: {item.quantity} </p>
           <button onClick={()=>removeItem(item.id)}>Quitar producto</button>
       </div>
       </div>

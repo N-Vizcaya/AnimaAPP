@@ -32,7 +32,7 @@ const Comprar = ({items, cantidad}) => {
 
                 
                     
-      <button className="Button" onClick={()=>count>1?setCount(count-1):''}>-</button>
+      <button className="Button" onClick={()=>count>0?setCount(count-1):''}>-</button>
                         
       <span style={{fontSize : '20px'}}> {count} </span>
                         

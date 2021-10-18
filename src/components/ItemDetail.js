@@ -29,13 +29,21 @@ const ItemDetail = ({item}) => {
           <p className="detalles"> {item?.description}</p>
           <p> Stock disponible: {item?.stock} </p>
         <div className="card-price">  
-          <p> {item?.price} </p>
+          <p> $ {item?.price} </p>
          </div>
-         
+         </div> 
+        
+        <div>
          <ItemCount items={item} stock={5}  cantidad={setCantidad} /> 
         </div>
+
+       <div>
+       <Link to="/Programs"><button className="btnBack" > Volver </button></Link>
+        </div> 
         
     </div>
+
+ 
 )
 
 }
