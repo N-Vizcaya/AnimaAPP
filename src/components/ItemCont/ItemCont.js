@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect} from "react";
-import css from './ItemCont.css'
-import Carrito from './CartWidget.js';
-import { CartContext } from "./CartContext/CartContext";
+import './ItemCont.css'
+import Carrito from '../CartWidget.js';
+import { CartContext } from "../CartContext/CartContext";
 
 
 

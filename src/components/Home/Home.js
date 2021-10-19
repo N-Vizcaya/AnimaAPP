@@ -1,7 +1,5 @@
 import React from "react";
 
-import Programs from "./Programas";
-
 
 
 const Home = () => {

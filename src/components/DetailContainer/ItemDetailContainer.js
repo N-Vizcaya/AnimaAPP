@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ItemDetail from "./ItemDetail.js";
+import ItemDetail from "../ItemDetail/ItemDetail.js";
 import { doc, getDoc } from "@firebase/firestore";
-import { db } from "./services/Firebase/Firebase.js";
+import { db } from "../services/Firebase/Firebase.js";
 import LoadingSpin from 'react-loading-spin';
 
 

@@ -1,9 +1,8 @@
-
 import './NavBar.css';
-import logo from './imgCom/newAnima.png';
-import Canasta from './CartWidget.js';
+import logo from '../imgCom/newAnima.png';
+import Canasta from '../CartWidget.js';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

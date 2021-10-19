@@ -1,9 +1,9 @@
 import './App.css';
-import NavBar from './components/NavBar.js'
+import NavBar from './components/Navbar/NavBar.js'
 import {BrowserRouter, Switch, Route,} from 'react-router-dom'
-import Home from './components/Home.js'
-import Programs from './components/Programas';
-import ItemDetailContainer from './components/ItemDetailContainer';
+import Home from './components/Home/Home.js'
+import Programs from './components/ItemList/ItemListContainer';
+import ItemDetailContainer from './components/DetailContainer/ItemDetailContainer';
 import Contacto from './Contacto';
 import Cart from './components/Cart/Cart.js'
 import {CartContextProvider} from './components/CartContext/CartContext'

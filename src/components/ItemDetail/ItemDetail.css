@@ -1,0 +1,87 @@
+.cardDetail{
+    max-width: 400px;
+    max-height: auto;
+    border-radius: 10px;
+    background-color: #00ff7f;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.295) 0px 0px 10px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 100px;
+    display: inline-block;
+}
+
+
+.card-photo{
+    padding: 5px;
+    
+}
+
+.card-content{
+    color:#0a0a0a;
+    padding: 10px;
+    
+}
+
+.card-price{
+background-color: #FA3A48;
+border-radius: 5px;
+border-style: solid;
+border-width: 1px;
+font-weight: bold;
+margin-bottom: 10px;
+
+}
+
+
+
+img{
+border-radius: 5px;
+
+}
+.titulo{
+
+border-top: solid;
+
+}
+
+.detalles{
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 1px;
+}
+
+.descripcion{
+font-weight: bold;
+border-bottom: solid;
+
+}
+
+.btnBack{
+    
+    background: #FA3A48;
+    background-image: -webkit-linear-gradient(top, #FA3A48, #FA3A48);
+    background-image: -moz-linear-gradient(top, #FA3A48, #FA3A48);
+    background-image: -ms-linear-gradient(top, #FA3A48, #FA3A48);
+    background-image: -o-linear-gradient(top, #FA3A48, #FA3A48);
+    background-image: linear-gradient(to bottom, #FA3A48, #FA3A48);
+    -webkit-border-radius: 9;
+    -moz-border-radius: 9;
+    border-radius: 9px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}     
+      
+.btnBack:hover {
+    background: #FA3A48;
+    background-image: -webkit-linear-gradient(top, #FA3A48, #00FF7F);
+    background-image: -moz-linear-gradient(top, #FA3A48, #00FF7F);
+    background-image: -ms-linear-gradient(top, #FA3A48, #00FF7F);
+    background-image: -o-linear-gradient(top, #FA3A48, #00FF7F);
+    background-image: linear-gradient(to bottom, #FA3A48, #00FF7F);
+    text-decoration: none;
+}
