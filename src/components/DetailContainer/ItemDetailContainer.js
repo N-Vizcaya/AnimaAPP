@@ -40,7 +40,7 @@ import LoadingSpin from 'react-loading-spin';
      return (
       
         <div className='ItemDetailContainer' >
-         {loading ? <LoadingSpin/> : <ItemDetail item={programs} programid={programid}/>}  
+         {loading ? <LoadingSpin/> : <ItemDetail item={programs}/>}  
     </div>
          
      )
