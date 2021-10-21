@@ -19,7 +19,7 @@ import LoadingSpin from 'react-loading-spin';
     useEffect(() => {
         
         getDoc(doc(db, "items" , programid)).then((querySnapshot) => {
-            console.log({id: querySnapshot.id, ...querySnapshot.data()})
+            
             const programs = { id: querySnapshot.id, ...querySnapshot.data()}
             setPrograms(programs)
         }).catch((error) => {

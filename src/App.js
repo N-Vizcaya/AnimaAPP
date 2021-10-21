@@ -4,7 +4,7 @@ import {BrowserRouter, Switch, Route,} from 'react-router-dom'
 import Home from './components/Home/Home.js'
 import Programs from './components/ItemList/ItemListContainer';
 import ItemDetailContainer from './components/DetailContainer/ItemDetailContainer';
-import Contacto from './Contacto';
+import Contacto from './components/Contacto/Contacto.js';
 import Cart from './components/Cart/Cart.js'
 import {CartContextProvider} from './components/CartContext/CartContext'
 import Login from './components/Login/login';

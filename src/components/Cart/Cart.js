@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import { Link } from "react-router-dom";
 import { CartContext } from '../CartContext/CartContext';
 import CartItem from './CartItem.js'
-import { collection, addDoc, getDoc, doc, Timestamp, writeBatch} from "@firebase/firestore";
+import { collection, addDoc, getDoc, doc, Timestamp, writeBatch, DocumentSnapshot} from "@firebase/firestore";
 import { db } from '../services/Firebase/Firebase';
 
 
@@ -37,17 +37,17 @@ const ordenConfirm = () => {
               stock: DocumentSnapshot.data().stock - orden.items[i].quantity
           })
       }else{
-        outOfSotck.push({... DocumentSnapshot.data(), id: DocumentSnapshot.id})
+        outOfSotck.push({...DocumentSnapshot.data(), id: DocumentSnapshot.id})
       }
   })
 });
 if(outOfSotck.length === 0) {
-  addDoc(collection(db, 'compras'), orden).then(() => {
+  addDoc(collection(db, 'reservas'), orden).then(() => {
       batch.commit().then(() => {
-          alert('La orden se ejecuto con exito')
+          alert('su reserva fue realizada con exito')
       })
   }).catch((error) => {
-      alert('Error al ejecutar la orden', error)
+      alert('Error al ejecutar la reserva', error)
   }).finally(() => {
       clear()
   })
@@ -58,7 +58,8 @@ if(outOfSotck.length === 0) {
 return(<>
 <div className="cartItem">
   <button id="emptyCart" onClick={()=>clear()} disabled={shoppingCart.length === 0}>Vaciar carrito</button>
-  <button onClick={() => ordenConfirm()} disabled={shoppingCart.length === 0}>Confirmar compra</button>
+ <button onClick={() => ordenConfirm()} disabled={shoppingCart.length === 0}>Confirmar compra</button>
+  
   {shoppingCart.map(e=><CartItem item={e} />)}
   <h3 disabled={shoppingCart.length === 0}>Total: {getTotal()}</h3>
 </div>  
