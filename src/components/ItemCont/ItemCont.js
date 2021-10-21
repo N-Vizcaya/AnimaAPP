@@ -5,22 +5,22 @@ import { CartContext } from "../CartContext/CartContext";
 
 
 
-const Comprar = ({items, cantidad}) => {
+const Comprar = ({item}) => {
 
     const [count, setCount] = useState(0);
-    const {addItem, isInCar, getProduct}= useContext(CartContext)
+    const {isInCar, getProduct, addItem}= useContext(CartContext)
 
 
     useEffect(() => {
-      if(isInCar(items.id)) {
-         const oldQuantity = getProduct(items.id)?.quantity
+      if(isInCar(item.id)) {
+         const oldQuantity = getProduct(item.id)?.quantity
          setCount(oldQuantity)
-         cantidad(oldQuantity)
+         
       }
-  },[])
+  }, [])
 
   const onAddProduct=()=>{
-    addItem(items, count)
+    addItem(item, count)
 }
 
 
@@ -36,11 +36,11 @@ const Comprar = ({items, cantidad}) => {
                         
       <span style={{fontSize : '20px'}}> {count} </span>
                         
-      <button className="Button" onClick={()=>count<items.stock?setCount(count+1):''}>+</button>
+      <button className="Button" onClick={()=>count<item.stock?setCount(count+1):''}>+</button>
 
                     
 
-     <button  onClick={onAddProduct} > Comprar </button>
+     <button  onClick={onAddProduct} > Agregar al carrito </button>
                     
                    
      <Carrito/>

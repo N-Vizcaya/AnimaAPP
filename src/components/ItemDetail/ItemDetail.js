@@ -32,7 +32,7 @@ const ItemDetail = ({item}) => {
          </div> 
         
         <div>
-         <ItemCount items={item} stock={5}  cantidad={setCantidad} /> 
+         <ItemCount item={item} stock={5}  cantidad={setCantidad} /> 
         </div>
 
        <div>

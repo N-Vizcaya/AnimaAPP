@@ -57,13 +57,26 @@ al igual que en ItemListContainer, utilizo useEffect, useParamas y useState, par
 
 Similar al componente Item, agrego los datos del productos mediante las props, solo que aca agrego detalles del producto como el precio, los dias, el stock y la descripcion. Por ultimo, le agrego el componente ItemCount a el cual, le paso tambien por props, el stock, la cantidad y el item mismo.
 
-# ItemCount
+## ItemCount
 
 aca llamo desdel CartContext las funciones de: onAddProduct(), isInCar().
 Dentro del useEffect, agrego la funcion IsInCar y si la respuesta recibida es true, seteo en un estado la cantidad de productos. 
 El stock que pase props, es para que, si el usuario quiere agregar mas del stock recibido, el boton de "+" no le sumara mas de dicha cantidad.
 La funion onAddProduct() sirve para agregar productos al carrito.
 
+
+## Home
+
+Este componente solamente contiene un <h1/> que da la bienvenida a la pagina.
+
+## CartWidget
+
+Contiene el icono del carrito impoortado de FontAwesome y la funcion getQuantity que traigo desde el cartContext, que se utiliza para ver la cantidad de productos que hay en el carrito.
+
+
+## Contacto
+
+Este componente solo tiene un formulario simple que funciona para simular un formulario de contacto si el usuario desea despejar dudas especificas.
 
 
 
