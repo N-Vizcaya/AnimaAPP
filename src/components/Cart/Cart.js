@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import './Cart.css'
 import { Link } from "react-router-dom";
 import { CartContext } from '../CartContext/CartContext';
 import CartItem from './CartItem.js'
@@ -14,7 +15,7 @@ const {shoppingCart, clear, getTotal}= useContext(CartContext)
 
   if(shoppingCart.lenght === 0){
     return(<>
-        <h1>No hay productos</h1>
+        <h1>No hay productos enel carrito</h1>
         <Link to="/Programs"> Volver al home</Link>
 
     </>)
@@ -41,6 +42,8 @@ const ordenConfirm = () => {
       }
   })
 });
+
+
 if(outOfSotck.length === 0) {
   addDoc(collection(db, 'reservas'), orden).then(() => {
       batch.commit().then(() => {
@@ -56,13 +59,16 @@ if(outOfSotck.length === 0) {
 
 
 return(<>
-<div className="cartItem">
-  <button id="emptyCart" onClick={()=>clear()} disabled={shoppingCart.length === 0}>Vaciar carrito</button>
- <button onClick={() => ordenConfirm()} disabled={shoppingCart.length === 0}>Confirmar compra</button>
-  
-  {shoppingCart.map(e=><CartItem item={e} />)}
-  <h3 disabled={shoppingCart.length === 0}>Total: $ {getTotal()}</h3>
-</div>  
+ <div className="cart-container">
+        <div className="items">
+            {shoppingCart.map(e=><CartItem item={e} />)}
+        </div>
+        <div className="d-flex justify-content-evenly row">
+            <button className="btn btn-secondary col-3"   onClick={()=>clear()}>Vaciar carrito</button>
+            <button className="btn btn-success col-3"   onClick={() => ordenConfirm()}>Confirmar Compra</button>
+            <h3 className="total">Total: ${getTotal()}</h3>
+        </div>
+    </div>
 </>)
 }
 
