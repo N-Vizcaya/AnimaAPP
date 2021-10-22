@@ -7,7 +7,6 @@ import ItemDetailContainer from './components/DetailContainer/ItemDetailContaine
 import Contacto from './components/Contacto/Contacto.js';
 import Cart from './components/Cart/Cart.js'
 import {CartContextProvider} from './components/CartContext/CartContext'
-import Login from './components/Login/login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -41,7 +40,6 @@ return (
 <ItemDetailContainer />
 </Route>
 
-
 <Route path="/Contacto">
 <Contacto/>
 </Route>
@@ -49,11 +47,6 @@ return (
 <Route path="/cart">
   <Cart/>
 </Route>
-
-<Route path="/login">
-<Login/>
-</Route>
-
 
 <Route path="/" exact>
   <Home/>

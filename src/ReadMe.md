@@ -67,7 +67,7 @@ La funion onAddProduct() sirve para agregar productos al carrito.
 
 ## Home
 
-Este componente solamente contiene un <h1/> que da la bienvenida a la pagina.
+Este componente solamente contiene un h1 que da la bienvenida a la pagina.
 
 ## CartWidget
 

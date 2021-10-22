@@ -61,7 +61,7 @@ return(<>
  <button onClick={() => ordenConfirm()} disabled={shoppingCart.length === 0}>Confirmar compra</button>
   
   {shoppingCart.map(e=><CartItem item={e} />)}
-  <h3 disabled={shoppingCart.length === 0}>Total: {getTotal()}</h3>
+  <h3 disabled={shoppingCart.length === 0}>Total: $ {getTotal()}</h3>
 </div>  
 </>)
 }

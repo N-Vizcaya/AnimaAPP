@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /testeo
+/Login
 /.pnp
 .pnp.js
 
@@ -13,7 +14,7 @@
 /build
 
 # misc
-.env
+db.env
 .DS_Store
 .env.local
 .env.development.local
