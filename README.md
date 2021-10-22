@@ -1,7 +1,7 @@
 # Anima Training APP
 
 ![AnimaAPP](./src/gif/animaAPP.gif)
-Anima Training es un emprendimiento de grupos de entrenamientso en espacios abiertos, personalizado para cualquier persona que quiera y pueda realizar actividades fisicas, sin importar su condicion fisica.
+Anima Training es un emprendimiento de grupos de entrenamientos en espacios abiertos, personalizado para cualquier persona que quiera y pueda realizar actividades fisicas.
 
 
 ## Creacion

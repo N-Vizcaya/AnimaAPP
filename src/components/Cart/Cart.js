@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import { Link } from "react-router-dom";
 import { CartContext } from '../CartContext/CartContext';
 import CartItem from './CartItem.js'
-import { collection, addDoc, getDoc, doc, Timestamp, writeBatch, DocumentSnapshot} from "@firebase/firestore";
+import { collection, addDoc, getDoc, doc, Timestamp, writeBatch} from "@firebase/firestore";
 import { db } from '../services/Firebase/Firebase';
 
 
