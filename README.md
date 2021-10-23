@@ -12,7 +12,7 @@ Anima Training es un emprendimiento de grupos de entrenamientos en espacios abie
 
 ## **Componentes**
 
-**CartContext**s
+**CartContext**
 
 clear: vacia el total de productos que haya en el carrito
 
@@ -78,7 +78,9 @@ Este componente solo tiene un formulario simple que funciona para simular un for
 
 ## Anotaciones
 
-El componente 'ItemDetail.css'
+El componente 'ItemDetail.css' presenta un error el cual no pude resolverlo, en ningun componente se lo esta importando y al querer eliminarlo se presenta el siguiente error 
+
+![AnimaAPP](./src/error/errorCSS.png)
 
 
 
