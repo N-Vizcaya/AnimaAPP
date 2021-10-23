@@ -3,10 +3,11 @@
 # dependencies
 /node_modules
 /testeo
+/ItemDetail.css
 /Login
 /.pnp
 .pnp.js
-
+/.ItemDetail.css
 # testing
 /coverage
 

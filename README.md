@@ -12,7 +12,7 @@ Anima Training es un emprendimiento de grupos de entrenamientos en espacios abie
 
 ## **Componentes**
 
-**CartContext**
+**CartContext**s
 
 clear: vacia el total de productos que haya en el carrito
 
@@ -75,6 +75,10 @@ Contiene el icono del carrito impoortado de FontAwesome y la funcion getQuantity
 ## Contacto
 
 Este componente solo tiene un formulario simple que funciona para simular un formulario de contacto si el usuario desea despejar dudas especificas.
+
+## Anotaciones
+
+El componente 'ItemDetail.css'
 
 
 
