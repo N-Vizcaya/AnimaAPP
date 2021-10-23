@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import './Cart.css'
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { CartContext } from '../CartContext/CartContext';
 import CartItem from './CartItem.js'
 import { collection, addDoc, getDoc, doc, Timestamp, writeBatch} from "@firebase/firestore";
@@ -11,14 +11,11 @@ const Cart = () =>{
    
 const {shoppingCart, clear, getTotal}= useContext(CartContext)
 
-
-
-  if(shoppingCart.lenght === 0){
-    return(<>
-        <h1>No hay productos enel carrito</h1>
-        <Link to="/Programs"> Volver al home</Link>
-
-    </>)
+if(shoppingCart.length===0){
+  return(<>
+      <h3>El carrito esta vacio</h3>
+      <Link to="/Programs"> Volver a la tienda</Link>
+  </>)
 }
 
 const ordenConfirm = () => {
@@ -63,9 +60,9 @@ return(<>
         <div className="items">
             {shoppingCart.map(e=><CartItem item={e} />)}
         </div>
-        <div className="d-flex justify-content-evenly row">
-            <button className="btn btn-secondary col-3"   onClick={()=>clear()} disabled={shoppingCart.lenght === 0} >Vaciar carrito</button>
-            <button className="btn btn-success col-3"   onClick={() => ordenConfirm()}>Confirmar Compra</button>
+        <div className="botones">
+            <button className="vaciar"  onClick={()=>clear()} >Cancelar</button>
+            <button className="confirmar" onClick={() => ordenConfirm()} >Comprar</button>
             <h3 className="total">Total: ${getTotal()}</h3>
         </div>
     </div>
