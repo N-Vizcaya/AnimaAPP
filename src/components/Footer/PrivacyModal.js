@@ -6,17 +6,23 @@ const PrivacyModal = (props) => {
     const [open, setOpen] = React.useState(false);
     const policyText = (
         <p>
-            Qui velit magna velit ipsum qui officia veniam excepteur aliqua sunt
-            velit fugiat. Qui velit magna velit ipsum qui officia veniam
-            excepteur aliqua sunt velit fugiat.Qui velit magna velit ipsum qui
-            officia veniam excepteur aliqua sunt velit fugiat. Qui velit magna
-            velit ipsum qui officia veniam excepteur aliqua sunt velit
-            fugiat.Qui velit magna velit ipsum qui officia veniam excepteur
-            aliqua sunt velit fugiat. Qui velit magna velit ipsum qui officia
-            veniam excepteur aliqua sunt velit fugiat.Qui velit magna velit
-            ipsum qui officia veniam excepteur aliqua sunt velit fugiat. Qui
-            velit magna velit ipsum qui officia veniam excepteur aliqua sunt
-            velit fugiat.
+            Lorem ipsum dolor sit amet consectetur adipiscing elit cum, 
+            vestibulum eu litora tincidunt est porttitor ante quis cras, 
+            tortor sagittis phasellus a senectus risus fusce. 
+            Venenatis velit enim volutpat molestie rhoncus ornare 
+            tincidunt ac quis ullamcorper nec, diam sagittis 
+            neque id imperdiet tellus condimentum ante aptent commodo pharetra, 
+            massa rutrum class iaculis vestibulum nisl aenean risus eros integer. 
+            Pellentesque ridiculus non justo interdum curae cras tristique himenaeos tellus, 
+            leo semper placerat sollicitudin magna purus lectus mollis proin, 
+            sodales ultrices ac enim laoreet venenatis taciti mattis.Taciti metus 
+            tempor nostra blandit ut elementum commodo mi, ac posuere ultrices etiam conubia penatibus. 
+            Id conubia 
+            libero morbi integer turpis vulputate fusce pharetra nibh vel, lacinia facilisi 
+            donec lacus vitae ac nec facilisis eu, praesent pellentesque ante egestas magna 
+            ullamcorper sapien lobortis class. Egestas aenean purus risus ultricies mollis 
+            augue ornare, conubia leo nibh porta maecenas placerat, pulvinar ullamcorper 
+            nullam imperdiet nec ante.
         </p>
     );
     return (

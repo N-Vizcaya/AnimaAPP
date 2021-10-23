@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import ItemCount from "../ItemCont/ItemCont";
 import './ItemDetail.css'
 import { Link } from "react-router-dom";
@@ -8,7 +7,7 @@ import { Link } from "react-router-dom";
 
 
 const ItemDetail = ({item}) => {
-  const [cantidad, setCantidad] = useState();
+  
   
   return(
 
@@ -26,7 +25,7 @@ const ItemDetail = ({item}) => {
          </div> 
         
         <div>
-         <ItemCount item={item} stock={5}  cantidad={setCantidad} /> 
+         <ItemCount item={item}/> 
         </div>
 
        <div>
