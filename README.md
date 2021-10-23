@@ -5,7 +5,7 @@ Anima Training es un emprendimiento de grupos de entrenamientos en espacios abie
 
 
 ## Creacion
-    npx create-react-app mi-app
+    npx create-react-app reactjsraiz
 ## Iniciar:
     npm start
 
