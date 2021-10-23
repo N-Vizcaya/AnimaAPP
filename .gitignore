@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 /testeo
-/ItemDetail.css
+/src/components/ItemDetail.css
 /Login
 /.pnp
 .pnp.js
