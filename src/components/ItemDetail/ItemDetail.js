@@ -3,9 +3,6 @@ import './detalles.css'
 import { Link } from "react-router-dom";
 
 
-
-
-
 const ItemDetail = ({item}) => {
   
   

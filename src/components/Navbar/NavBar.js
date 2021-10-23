@@ -9,9 +9,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const NavBar = () => {
 
-    // const {user, logout} =  useContext(UserContext)
-
-
     return (
     <div className="menu1" >
   <Navbar bg="success" expand="lg">
