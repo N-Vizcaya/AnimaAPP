@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ItemCount from "../ItemCont/ItemCont";
-import "./ItemDetail.css"
+import './ItemDetail.css'
 import { Link } from "react-router-dom";
 
 
@@ -10,13 +10,7 @@ import { Link } from "react-router-dom";
 const ItemDetail = ({item}) => {
   const [cantidad, setCantidad] = useState();
   
-
-
-  
-
-
-
-    return(
+  return(
 
         <div className="cardDetail">
         <div className="card-photo">
@@ -40,12 +34,8 @@ const ItemDetail = ({item}) => {
         </div> 
         
     </div>
-
  
-)
-
-}
+)}
 
    
-
 export default ItemDetail
