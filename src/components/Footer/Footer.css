@@ -1,3 +1,8 @@
+.footer-container{
+    position: fixed;
+}
+
+
 a {
     color: inherit;
 }
@@ -28,17 +33,7 @@ a {
     align-items: center;
 }
 
-.item3 {
-    font-size: 20px;
-    background: #292a30;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.item3:hover {
-    background-color: #000000;
-    transition: 0.4s;
-}
+
 .item4 {
     font-size: 20px;
     background: #25252b;
@@ -73,7 +68,7 @@ a {
     grid-template-columns: 3fr 6fr 1fr 1fr 1fr;
 }
 
-/* Extra small devices (phones, 600px and down) */
+
 @media only screen and (max-width: 600px) {
     .item1 {
         font-size: 12px;
@@ -89,7 +84,7 @@ a {
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+
 @media only screen and (min-width: 600px) {
     .item1 {
         font-size: 14px;
@@ -98,14 +93,13 @@ a {
     .item2 {
         font-size: 9px;
     }
-    .item3,
     .item4,
     .item5 {
         font-size: 14px;
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+
 @media only screen and (min-width: 768px) {
     .item1 {
         font-size: 16px;
@@ -114,14 +108,13 @@ a {
     .item2 {
         font-size: 11px;
     }
-    .item3,
+  
     .item4,
     .item5 {
         font-size: 16px;
     }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .item1 {
         font-size: 18px;
@@ -130,14 +123,14 @@ a {
     .item2 {
         font-size: 13px;
     }
-    .item3,
+  
     .item4,
     .item5 {
         font-size: 18px;
     }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+
 @media only screen and (min-width: 1200px) {
     .item1 {
         font-size: 20px;
@@ -146,7 +139,7 @@ a {
     .item2 {
         font-size: 15px;
     }
-    .item3,
+   
     .item4,
     .item5 {
         font-size: 20px;

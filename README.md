@@ -51,7 +51,7 @@ En este componente armo la Card que muestre el producto sin los detalles, solo s
 
 ## ItemDetailContainer
 
-al igual que en ItemListContainer, utilizo useEffect, useParamas y useState, para realizar una accion similar, la diferencia es que aca lo utilizo para filtrar productos por la categoria. Consulto con la base de datos de Firebase para que me devuelva el producto segun en que categoria haya hecho click previamente (en ItemListContainer). Tambien seteo un estado condicional con "loading" y le agrego un componente llamado LoadingSpin para que, mientras los productos se esten cargando, se muestre una "rueda giratoria" hasta que los productos esten listos. Por ultimo, le paso los datos por props al componente ItemDetail
+Al igual que en ItemListContainer, utilizo useEffect, useParamas y useState, para realizar una accion similar, la diferencia es que aca lo utilizo para filtrar productos por la categoria. Consulto con la base de datos de Firebase para que me devuelva el producto segun en que categoria haya hecho click previamente (en ItemListContainer). Tambien seteo un estado condicional con "loading" y le agrego un componente llamado LoadingSpin para que, mientras los productos se esten cargando, se muestre una "rueda giratoria" hasta que los productos esten listos. Por ultimo, le paso los datos por props al componente ItemDetail
 
 ## ItemDetail
 
@@ -59,11 +59,10 @@ Similar al componente Item, agrego los datos del productos mediante las props, s
 
 ## ItemCount
 
-aca llamo desdel CartContext las funciones de: onAddProduct(), isInCar().
+Aca llamo desdel CartContext las funciones de: onAddProduct(), isInCar().
 Dentro del useEffect, agrego la funcion IsInCar y si la respuesta recibida es true, seteo en un estado la cantidad de productos. 
 El stock que pase props, es para que, si el usuario quiere agregar mas del stock recibido, el boton de "+" no le sumara mas de dicha cantidad.
 La funion onAddProduct() sirve para agregar productos al carrito.
-
 
 ## Home
 
@@ -72,7 +71,6 @@ Este componente solamente contiene un h1 que da la bienvenida a la pagina.
 ## CartWidget
 
 Contiene el icono del carrito impoortado de FontAwesome y la funcion getQuantity que traigo desde el cartContext, que se utiliza para ver la cantidad de productos que hay en el carrito.
-
 
 ## Contacto
 

@@ -64,7 +64,7 @@ return(<>
             {shoppingCart.map(e=><CartItem item={e} />)}
         </div>
         <div className="d-flex justify-content-evenly row">
-            <button className="btn btn-secondary col-3"   onClick={()=>clear()}>Vaciar carrito</button>
+            <button className="btn btn-secondary col-3"   onClick={()=>clear()} disabled={shoppingCart.lenght === 0} >Vaciar carrito</button>
             <button className="btn btn-success col-3"   onClick={() => ordenConfirm()}>Confirmar Compra</button>
             <h3 className="total">Total: ${getTotal()}</h3>
         </div>

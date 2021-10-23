@@ -3,8 +3,7 @@ import "./Footer.css";
 import PrivacyModal from "./PrivacyModal.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faYoutube,
-    faGithub,
+    faInstagram,
     faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
@@ -25,27 +24,21 @@ const Footer = () => {
                         Reserved.
                     </span>
                 </div>
-                {/* <a
-                    href="https://github.com/sudiptob2/simple-react-footer"
-                    target="_blank"
-                    className="item3"
-                >
-                    <FontAwesomeIcon icon={faGithub} />
-                </a>
+                
                 <a
-                    href="http://fb.com/sudiptob2"
+                    href="https://www.facebook.com/animatrainingok/"
                     target="_blank"
                     className="item4"
                 >
                     <FontAwesomeIcon icon={faFacebook} />
                 </a>
                 <a
-                    href="https://www.youtube.com/"
+                    href="https://www.instagram.com/anima_training/"
                     target="_blank"
                     className="item5"
                 >
-                    <FontAwesomeIcon icon={faYoutube} />
-                </a> */}
+                    <FontAwesomeIcon icon={faInstagram} />
+                </a> 
 
                 {false && <PrivacyModal click={true} />}
             </div>
