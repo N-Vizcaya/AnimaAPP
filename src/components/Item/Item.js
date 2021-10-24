@@ -2,6 +2,8 @@ import React from "react";
 import './Item.css'
 import LoadingSpin from 'react-loading-spin';
 import { Link } from 'react-router-dom';
+import {Card, Button} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -24,17 +26,15 @@ return <LoadingSpin/>
 
       return (
 
-<div className="card">
-    
-             <div className="card-content">
-                  <h1 className="titulo">{programs.name}</h1>
-                  <p className="dias">{programs.dias}</p>
-                <div className="cardLink">  
-                <Link to={`/programa/${programs.id}`} > <button className="verMas">Ver Detalle </button> </Link>
-                 </div>
-                 
-                </div>
-  </div>
+<Card style={{ width: '18rem' }}>
+  <Card.Body>
+    <Card.Title> {programs.name} </Card.Title>
+    <Card.Text>
+      {programs.dias}
+    </Card.Text>
+    <Link to={`/programa/${programs.id}`} > <Button className="bg-danger">Ver Detalle </Button> </Link>
+  </Card.Body>
+</Card>
 )
   
 }

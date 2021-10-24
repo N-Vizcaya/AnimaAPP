@@ -1,6 +1,8 @@
 import ItemCount from "../ItemCont/ItemCont";
 import './detalles.css'
 import { Link } from "react-router-dom";
+import {Card, Button} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const ItemDetail = ({item}) => {
@@ -8,29 +10,22 @@ const ItemDetail = ({item}) => {
   
   return(
 
-        <div className="cardDetail">
-        <div className="card-photo">
-            <img src={"../../"+ item?.imgURL} width='380' alt="imgCard" />
-        </div>
-        <div className="card-content">
-          <h1 className="titulo"> {item?.name} </h1>
-          <p className="detalles"> {item?.description}</p>
-          <p> Stock disponible: {item?.stock} </p>
-        <div className="card-price">  
-          <p> $ {item?.price} </p>
-         </div>
-         </div> 
+    <Card style={{ width: '18rem' }}>
+    <Card.Img variant="top" src={"../../"+ item?.imgURL} />
+    <Card.Body>
+      <Card.Title> {item?.name} </Card.Title>
+      <Card.Text>
+        {item?.description} 
+      </Card.Text>
+      <Card.Text>
+        {item?.dias}
+      </Card.Text>
+      <ItemCount item={item}/> 
+      <Link to="/Programs"><Button className="bg-danger" > Volver </Button></Link>
+    </Card.Body>
+  </Card>
         
-        <div>
-         <ItemCount item={item}/> 
-        </div>
-
-       <div>
-       <Link to="/Programs"><button className="btnBack" > Volver </button></Link>
-        </div> 
-        
-    </div>
- 
+    
 )}
 
    

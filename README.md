@@ -76,11 +76,7 @@ Contiene el icono del carrito impoortado de FontAwesome y la funcion getQuantity
 
 Este componente solo tiene un formulario simple que funciona para simular un formulario de contacto si el usuario desea despejar dudas especificas.
 
-## Anotaciones
 
-El componente 'ItemDetail.css' presenta un error el cual no pude resolverlo, en ningun componente se lo esta importando y al querer eliminarlo se presenta el siguiente error, y al querer moverlo a una carpeta u agregarlo a gitIgnore, el error sigue persistiendo
-
-![AnimaAPP](./src/error/Error.png)
 
 
 

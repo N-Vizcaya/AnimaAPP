@@ -1,6 +1,8 @@
 import React, {useContext} from "react";
 import { CartContext } from "../CartContext/CartContext";
-import "../ItemDetail.css"
+import './CartItem.css'
+import {Card, Button} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
   const CartItem = ({item, setCantidad}) =>{
    
@@ -9,18 +11,24 @@ import "../ItemDetail.css"
 
     return(
       
-      <div className="cardDetail">
-        <div className="card-photo">
-            <img src={"../../"+ item.imgURL} width='380' alt="imgCard" />
-        </div>
-        <div className="card-content">
-          <h1 className="titulo"> {item.name} </h1>
-          <p> {item.description}</p>
-          <p> $ {item.price}</p>
-          <p> Cantidad seleccionada: {item.quantity} </p>
-          <button onClick={()=>removeItem(item.id)}>Quitar producto</button>
-      </div>
-      </div>
+      <Card style={{ width: '18rem' }}>
+    <Card.Img variant="top" src={"../../"+ item?.imgURL} />
+    <Card.Body>
+      <Card.Title> {item?.name} </Card.Title>
+      <Card.Text>
+        {item?.description} 
+      </Card.Text>
+      <Card.Text>
+        {item?.dias}
+      </Card.Text>
+      <Card.Text>
+      Cantidad seleccionada: {item.quantity}
+      </Card.Text>
+      <Button className="bg-danger" onClick={()=>removeItem(item.id)}>Quitar producto</Button> 
+    </Card.Body>
+  </Card>
+          
+    
       )
 
 

@@ -1,10 +1,10 @@
 .card{
-    width: 400px;
-    height: auto;
+   
+    
     border-radius: 10px;
     background-color: #00ff7f;
     margin: 10px;
-    /* box-shadow: rgba(0, 0, 0, 0.295) 0px 0px 10px; */
+    box-shadow: rgba(0, 0, 0, 0.295) 0px 0px 10px;
     font-family: 'Open Sans', sans-serif;
     filter: grayscale();
 	border: 6px solid whitesmoke;
@@ -26,54 +26,3 @@ text-decoration: none;
 
 
 
-.card-content{
-    color:#0a0a0a;
-    padding: 10px;
-    
-}
-
-
-
-
-
-img{
-border-radius: 5px;
-
-}
-.titulo{
-
-border-top: solid;
-
-}
-
-.dias{
-border-bottom: solid;
-}
-.descripcion{
-font-weight: bold;
-border-bottom: solid;
-
-}
-
-.verMas{
-    border: none;
-	background: #FA3A48;
-	color: #ffffff !important;
-	font-weight: 100;
-	padding: 20px;
-	text-transform: uppercase;
-	border-radius: 6px;
-	display: inline-block;
-	transition: all 0.3s ease 0s;
-
-}
-
-.verMas:hover{
-    color: #404040 !important;
-	font-weight: 700 !important;
-	letter-spacing: 3px;
-	background: none;
-	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-	transition: all 0.3s ease 0s;
-}
